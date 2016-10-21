@@ -1,0 +1,5 @@
+D:\Laboratory\LaboratoryCSS\WebSiteDesktop\bin\WebSiteDesktop.dll
+D:\Laboratory\LaboratoryCSS\WebSiteDesktop\bin\WebSiteDesktop.pdb
+D:\Laboratory\LaboratoryCSS\WebSiteDesktop\obj\Debug\WebSiteDesktop.dll
+D:\Laboratory\LaboratoryCSS\WebSiteDesktop\obj\Debug\WebSiteDesktop.pdb
+D:\Laboratory\LaboratoryCSS\WebSiteDesktop\obj\Debug\WebSiteDesktop.csprojResolveAssemblyReference.cache

@@ -1,0 +1,204 @@
+html {width:100%; height:auto;}
+body {
+	width:100%;
+	 height:auto; margin: 0;
+	 padding: 0;
+	animation: fade-in 0.4s 1s forwards ease-out;
+ }
+.Menu{
+	position: fixed;;
+	left:0px;
+	top:0px;
+	width: 150px;
+	height:95%;
+	margin-top: 5px;
+	margin-left: 0px;
+	margin-bottom: 110px;
+	padding: 10px 5px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background: #F5F5F5; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(#E8E8E8, #F5F5F5); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#E8E8E8, #F5F5F5); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#, #F5F5F5); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(#E8E8E8, #F5F5F5); /* Standard syntax */
+		color: #1F1F1F;
+		border-top:  2px dashed red;
+		border-right:  2px dashed red;
+	  border-bottom:  2px dashed red;
+}
+.hide {
+  animation: hide-menu-container 0.7s 0.55s forwards cubic-bezier(.54,-0.38,.34,1.42);
+}
+.show{
+		animation: show-menu-container 0.7s 0.55s forwards cubic-bezier(.54,-0.38,.34,1.42);
+}
+.Menu .MenuBtnAction{
+	border: 1px dashed red;
+	padding: 2px;
+	top:3px;
+	 width: 80%;
+	 height: :auto;
+}
+.Menu .MenuBtnAction span{
+	width: 150px;;
+	height: 55px;
+  margin: 2px auto;
+	font-family: Comic Sans MS;
+}
+.Menu .Buttons {
+	width:96%;
+	padding:10px 15px;
+	float:left;
+	position:relative;
+	margin:0px 0px;
+	background: transparent;
+	}
+.Menu .Buttons input[type="button"]{
+	font-family:Comic Sans MS;
+	position:relative;
+	min-height:25px;
+	min-width:80px;
+	padding:5px 5px;
+	margin:auto auto;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #92E919; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#92E919, #A3F235); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#92E919, #A3F235); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#92E919, #A3F235); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#92E919, #A3F235); /* Standard syntax */
+}
+.Menu .Buttons input[type="button"]:hover {
+	-webkit-box-shadow: inset 0px 0px 5px 3px #C4F502);
+	-moz-box-shadow: inset 0px 0px 5px 3px #C4F502;
+	box-shadow: inset 0px 0px 5px 3px #C4F502;
+}
+.Content {
+	border:dashed 2px #575757;
+	height:auto;
+	min-height:600px;
+	width:500px;
+	padding:20px 50px;
+	margin:20px auto;
+	position:relative;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #F5F5F5; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#E8E8E8, #F5F5F5); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#E8E8E8, #F5F5F5); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#, #F5F5F5); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#E8E8E8, #F5F5F5); /* Standard syntax */
+	color: #1F1F1F;
+}
+.Content .Field {
+	width:auto;
+	min-width:150px;
+	padding:10px 15px;
+	float:left;
+	margin:0px 0px;
+	position:relative;
+	background: transparent; }
+.Content .Field  span{font-family:Comic Sans MS;}
+.Content .Campo {
+	width:50%;
+	padding:10px 15px;
+	float:right;
+	margin:0px 0px;
+	position:relative;
+	background: transparent; }
+.Content .Campo  input[type="text"]{
+	font-family:Comic Sans MS;
+	border:solid 1px #575757;
+	padding:4px 5px;
+	background-color:#F5F5F5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.Content .Campo  input[type="text"]:focus{
+	color: #A1A1A1;
+	border:solid 1px #3088DA;
+	-webkit-box-shadow: inset 0px 0px 5px 3px #EAEAEA);
+	-moz-box-shadow: inset 0px 0px 5px 3px #EAEAEA;
+	box-shadow: inset 0px 0px 5px 3px #EAEAEA;
+}
+.Content .Campo  input[type="text"]:hover{
+	color: #A1A1A1;
+	border:solid 1px #3088DA;
+	-webkit-box-shadow: inset 0px 0px 5px 3px #EAEAEA);
+	-moz-box-shadow: inset 0px 0px 5px 3px #EAEAEA;
+	box-shadow: inset 0px 0px 5px 3px #EAEAEA;
+}
+.Content .CampoMap {
+	font-family:Comic Sans MS;
+	width:96%;
+	padding:10px 15px;
+	float:left;
+	position:relative;
+	margin:0px 0px;
+	background: transparent;
+}
+.Content .CampoMap .MapTitle {
+	text-align:center;
+	font-weight:bold;
+	position:relative;
+	padding:10px 10px;
+	width:100%;
+	margin:10px auto;
+}
+.Content .CampoMap .GMaps {
+	border:dashed 1px black;
+	height:250px;
+	width:500px;
+	position:relative;
+	margin:10px auto;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.Content .CampoMap .GMaps:hover {
+	border:dashed 1px #3088DA;
+	-webkit-box-shadow: inset 0px 0px 5px 3px #DCDBDB);
+	-moz-box-shadow: inset 0px 0px 5px 3px #DCDBDB;
+	box-shadow: inset 0px 0px 5px 3px #DCDBDB;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes show-menu-container {
+  0% {
+    width: 20px;
+  }
+  100% {
+   width: 150px;
+  }
+}
+
+@keyframes hide-menu-container {
+  0% {
+    width: 150px;
+  }
+  100% {
+   width: 20px;
+  }
+}

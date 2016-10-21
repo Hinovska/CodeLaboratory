@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="./Styles/Paint.css" rel="stylesheet" type="text/css" />
+		<script src="./Javascript/jquery.min.js" type="text/javascript"></script>		
+		<script src="./Javascript/knockout-3.4.0.js" type="text/javascript"></script>	
+		<script src="./Javascript/knockout.simpleGrid.3.0.js" type="text/javascript"></script>		
+	</head>
+	<body>
+		<div id="Content"  class="content">
+			<div id="Filters" class="filters">
+				<div class="select">
+				  <span class="placeholder">Departamento</span>
+				  <ul>
+					<li>Cundinamarca</li>
+					<li>Boyaca</li>
+					<li>Magdalena</li>
+					<li>Putumayo</li>
+				  </ul>
+				</div>
+			</div>
+			<div id="Grid" class="Grid">
+				<div data-bind='simpleGrid: gridViewModel'></div>		 
+				<button data-bind='click: addItem'>
+					Add item
+				</button>		 
+				<button data-bind='click: sortByName'>
+					Sort by name
+				</button>		 
+				<button data-bind='click: jumpToFirstPage, enable: gridViewModel.currentPageIndex'>
+					Jump to first page
+				</button> 
+			</div>
+		</div>
+
+		<div>
+			<input type="text" data-bind="value:name"/>
+			<input type="text" data-bind="value:lastName"/>
+			<span data-bind="text:fullName"></span>
+		</div>
+		<script src="./Javascript/Core.js" type="text/javascript"></script>	
+		<script src="./Javascript/Controls.js" type="text/javascript"></script>		
+	</body>
+	
+</html>

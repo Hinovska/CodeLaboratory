@@ -1,0 +1,4 @@
+D:\Laboratory\LaboratoryCSS\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\Laboratory\LaboratoryCSS\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\Laboratory\LaboratoryCSS\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\Laboratory\LaboratoryCSS\BusinessLogic\obj\Debug\BusinessLogic.pdb

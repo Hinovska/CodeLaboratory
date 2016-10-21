@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <script src="./Jquery/jquery-1.11.3.min.js"></script>
+    <style type="text/css">
+      html, body {width:100%; height:100%; margin: 0; padding: 0; }
+      #map { border:dashed 1px black; height:80%; width:80%; position:fixed; button:1px; }
+    </style>
+  </head>
+  <body>
+	<div><span>Mi Primer Mapa Google</span></div>
+	<div>
+	<button data-lat="4.707767" data-lng="-74.049054">Posicion 1</button>
+	<button data-lat="4.737767" data-lng="-74.089054">Posicion 2</button>
+	<button data-lat="4.757767" data-lng="-74.129054">Posicion 3</button>
+	</div>
+    <div id="map"></div>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN7vW5ZgALK-s_qElInbIvq0XEGLXiJyA" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+		//Map
+		var map = new google.maps.Map(document.getElementById('map'), {
+			//Focus de Apertura Inicial
+			center: {lat: 4.737767, lng: -74.049054},
+			//Zoom de Apertura inicial
+			zoom: 18,
+			//Permite desplazamiento
+			draggable: true,
+			//Color de fondo en Cambios de Zomm o Load
+			backgroundColor: '#77B3EB',
+			//Habilitar atajos de teclado
+			keyboardShortcuts: false,
+			// ???
+			mapTypeControl: false,
+			//Zomm Maximo Limite para Acercar
+			maxZoom: 19,
+			//Zomm Minimo Limite para Alejar
+			minZoom: 10,
+			// ???
+			panControl: false,
+			//Habilitar Control de StreetView
+			streetViewControl: false,
+			//Zoom con rueda central de mouse
+			scrollwheel: true,
+			//Habilitar Control de Zoom
+			zoomControl: false,
+			//Habilitar Control de Cambio de Tipo de Mapa Satelite/Relieve/Mapa
+			mapTypeControl: false,
+			//Tipo de Mapa Satelite(satellite)/Satelite con vias(hybrid)/Relieve(terrain)/Mapa(roadmap)-Default
+			mapTypeId:"roadmap"		
+		  });
+		
+		
+		//Maker
+		var marker = new google.maps.Marker({
+			//Posicion de Icono
+			position:{lat: 4.737767, lng: -74.049054},
+			//Icono
+			icon: "./MapIcons/truck3.png",
+			//Tooltip de Icono
+			title:"Tienda",
+			//Habilita Movimiento
+			draggable: true,
+			//Opacidad de Icono
+			opacity:0.8,
+			//Mapa en que se utilizara
+			map:map
+		});
+		
+		var markerAux = new google.maps.Marker({
+			//Posicion de Icono
+			position:{lat: 4.737067, lng: -74.049454},
+			//Icono
+			icon: "./MapIcons/tower.png",
+			//Tooltip de Icono
+			title:"Proveedor",
+			//Habilita Movimiento
+			draggable: true,
+			//Opacidad de Icono
+			opacity:0.8,
+			//Mapa en que se utilizara
+			map:map,
+			//Mensaje Informacion
+			event: {name: 'click',
+					callback: function(){
+						var infoWindow = new google.maps.InfoWindow({
+							content:'<div style="color:red;" ><span></span></div>'
+							});
+						infoWindow.open(map, markerAux);						
+					}
+			}
+		});
+		
+		//Events
+		$('button').click(function(e){
+			e.preventDefault();
+			
+			var lat = $(this).data('lat');
+			var lng = $(this).data('lng');
+			var latAux = lat + 0.000180;
+			var lngAux = lng - 0.000270;
+			var location = new google.maps.LatLng(lat,lng);
+			var locationAux = new google.maps.LatLng(latAux,lngAux);
+			
+			map.setCenter(location);
+			marker.setPosition(location);
+			//map.setCenter(locationAux);
+			markerAux.setPosition(locationAux);
+		});
+    </script>
+   
+  </body>
+</html>

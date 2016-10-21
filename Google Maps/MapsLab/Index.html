@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="./CSS/style.css">
+	<script src="./JQuery/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<div id="Menu" class="Menu">
+	<div class="MenuBtnAction">
+		<cnter>
+			<span>Menu</span>
+		</center>
+	</div>
+		<div class="Buttons">
+					<input id="btnPosition" type="button" onclick="PrintData()" value="Position"/>
+					<input id="btnPoligon" type="button" onclick="FindNearLocations()" value="Polygon"/>
+		</div>
+	</div>
+<div class="Content">
+	<div class="Field"><span>Nombre:</span></div>
+	<div class="Campo">
+		<input id="txtName" type="text" />
+	</div>
+	<div class="Field"><span>Apellido:</span></div>
+	<div class="Campo">
+		<input id="txtName" type="text" />
+	</div>
+	<div class="Field"><span>Email:</span></div>
+	<div class="Campo">
+		<input id="txtName" type="text" />
+	</div>
+	<div class="Field"><span>Ciudad:</span></div>
+	<div class="Campo">
+		<input id="txtName" type="text" />
+	</div>
+	<div class="Field"><span>Telefono:</span></div>
+	<div class="Campo">
+		<input id="txtName" type="text" />
+	</div>
+	<div class="CampoMap">
+		<center>
+			<span class="MapTitle">Tu Ubicacion</span>
+		</center>
+		<div id="MapDreamSold" class="GMaps"></div>
+	</div>
+	<iframe width="554" height="280" src="https://www.youtube.com/embed/5hS_mW4efH0?list=WL" frameborder="0" allowfullscreen></iframe>
+</div>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN7vW5ZgALK-s_qElInbIvq0XEGLXiJyA" type="text/javascript">
+	</script>
+	<script src="./Scripts/Mapster.js"></script>
+	<script src="./Scripts/map-options.js"></script>
+	<script type="text/javascript">
+		MyLocations = {
+			University: new google.maps.LatLng({lat: 4.667661, lng: -74.059458}),
+			Work: new google.maps.LatLng({lat: 4.735447, lng: -74.050238}),
+			Home: new google.maps.LatLng({lat: 4.650592, lng: -74.142269}),
+			Love: new google.maps.LatLng({lat: 4.609975, lng: -74.197631})
+		};
+
+		function PrintData(){
+			if (CurrentPosition !== undefined){
+				alert("Tu estas ubicado en:\nLatitud: " + CurrentPosition.lat() + "\nLongitud: " + CurrentPosition.lng() + "");
+			}
+		};
+
+		function FindNearLocations(){
+			if (CurrentPosition !== undefined){
+					var PolyCoords = [];
+					for (var item in MyLocations){
+							PolyCoords.push(MyLocations[item]);
+					}
+					var bermudaTriangle = new google.maps.Polygon({paths: PolyCoords});
+					bermudaTriangle.setMap(map.gMap);
+					// if (google.maps.geometry.poly.containsLocation(CurrentPosition, bermudaTriangle)){
+					// 	alert("Estamos Adentro");
+					// }
+					// else {
+					// 	alert("Estamos Afuera");
+					// }
+			}
+		};
+
+		$(document).ready(function(){
+				$('#Menu').click(function() {
+					if ($(this).css('width') != '150px'){
+						$(this).removeClass('hide');
+						$(this).css('width', '20px')
+						$(this).addClass('show');
+					}else {
+						$(this).removeClass('show');
+						$(this).css('width', '150px')
+						$(this).addClass('hide');
+					}
+				});
+		});
+
+	</script>
+	<script src="./Scripts/script.js"></script>
+
+</body>
+</html>
+<!--https://developers.google.com/maps/documentation/javascript/reference#Map-->

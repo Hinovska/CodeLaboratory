@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="WebSiteDesktop.MasterPages.Main" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="head">
+    <title>Laboratorio CSS3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link href="../HtmlTools/StylesCSS/Main.Master.css" rel="stylesheet" type="text/css" />
+	<script src="../HtmlTools/Jquery/jquery.min.js" type="text/javascript"></script>    		
+    <asp:ContentPlaceHolder ID="phHeader" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="body">
+    <div id="MenuMaster" class="fixed-nav-bar">
+	    <div class="logo"><span>Logic Synergy</span>Team</div>
+	    <input type="checkbox" id="menuButton" />
+	    <label for="menuButton" class="menu-button-label">
+		    <div class="white-bar"></div>
+		    <div class="white-bar"></div>
+		    <div class="white-bar"></div>
+		    <div class="white-bar"></div>
+	    </label>
+    </div>    
+    <div class="the-bass">
+		<div class="rela-block drop-down-container">
+			<div class="drop-down-item">
+                <div class="itemMenu"><span>Home</span></div>
+            </div>
+		</div>
+		<div class="rela-block drop-down-container">
+			<div class="drop-down-item">
+                <div class="itemMenu"><span>Us</span></div>
+            </div>
+		</div>
+		<div class="rela-block drop-down-container">
+			<div class="drop-down-item">
+                <div class="itemMenu"><span>Services</span></div>
+            </div>
+		</div>
+		<div class="rela-block drop-down-container">
+			<div class="drop-down-item">
+                <div class="itemMenu"><span>Contact</span></div>
+            </div>
+		</div>
+		<div class="rela-block drop-down-container">
+			<div class="drop-down-item">
+                <div class="itemMenu"><span>Gallery</span></div>
+            </div>
+		</div>
+		<div class="rela-block drop-down-container">
+			<div class="drop-down-item">
+                <div class="itemMenu"><span>Me</span></div>
+            </div>
+		</div>
+	</div>
+    <div id="ContentPage">		
+        <%--Start Contenido--%>
+        <asp:ContentPlaceHolder ID="phContent" runat="server"></asp:ContentPlaceHolder>
+        <%--End Contenido--%>
+    </div>
+    <div id="ContentFooter">
+        <div class="rela-block footer">
+			<div class="rela-block social-buttons-container">
+				<div class="social-button facebook-button"></div>
+				<div class="social-button insta-button"></div>
+				<div class="social-button twitter-button"></div>
+				<div class="social-button pinterest-button"></div>
+			</div>
+			<div class="rela-block footer-links-container"></div>
+            
+		</div>
+        <asp:ContentPlaceHolder ID="phFooter" runat="server"></asp:ContentPlaceHolder>
+        <div id="ShareBtn" class="shareMe">
+        <div class="btnSharePanel"></div>
+        </div>
+    </div>
+    <script src="../HtmlTools/Javascript/Main.Master.js" type="text/javascript"></script>
+</body>
+</html>

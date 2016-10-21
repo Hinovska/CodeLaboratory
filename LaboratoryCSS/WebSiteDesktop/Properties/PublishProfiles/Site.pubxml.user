@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Laboratory\LaboratoryCSS\Site</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/WebSiteDesktop.dll">
+      <publishTime>06/13/2016 10:16:36</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>01/28/2016 14:25:00</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>01/28/2016 08:46:19</publishTime>
+    </File>
+    <File Include="HtmlTools/Javascript/Main.Master.js">
+      <publishTime>01/29/2016 10:51:41</publishTime>
+    </File>
+    <File Include="HtmlTools/Jquery/jquery.min.js">
+      <publishTime>01/26/2016 14:56:49</publishTime>
+    </File>
+    <File Include="HtmlTools/StylesCSS/FontGoogleRaleway.css">
+      <publishTime>01/28/2016 12:57:03</publishTime>
+    </File>
+    <File Include="HtmlTools/StylesCSS/Main.Master.css">
+      <publishTime>01/29/2016 11:19:11</publishTime>
+    </File>
+    <File Include="Images/BackGrounds/187bebd6e0e2f26e1dc629e5949fa2c0.jpg">
+      <publishTime>01/28/2016 12:55:28</publishTime>
+    </File>
+    <File Include="Images/BackGrounds/Phone-Wallpapers-Good-H88.jpg">
+      <publishTime>01/28/2016 12:54:06</publishTime>
+    </File>
+    <File Include="Images/BackGrounds/photoshops.jpg">
+      <publishTime>01/28/2016 12:52:37</publishTime>
+    </File>
+    <File Include="Images/BackGrounds/white-washed-wood-furniture-minimalist-decor-on-white-design-ideas.jpg">
+      <publishTime>01/28/2016 12:55:07</publishTime>
+    </File>
+    <File Include="Images/SocialNetworks/facebook-256.png">
+      <publishTime>01/28/2016 12:48:38</publishTime>
+    </File>
+    <File Include="Images/SocialNetworks/instagram-256.png">
+      <publishTime>01/28/2016 12:49:00</publishTime>
+    </File>
+    <File Include="Images/SocialNetworks/pinterest-256.png">
+      <publishTime>01/28/2016 12:48:48</publishTime>
+    </File>
+    <File Include="Images/SocialNetworks/share.png">
+      <publishTime>01/29/2016 08:08:13</publishTime>
+    </File>
+    <File Include="Images/SocialNetworks/twitter-256.png">
+      <publishTime>01/28/2016 12:48:20</publishTime>
+    </File>
+    <File Include="MasterPages/Main.Master">
+      <publishTime>01/29/2016 10:46:23</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/13/2016 10:16:37</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
