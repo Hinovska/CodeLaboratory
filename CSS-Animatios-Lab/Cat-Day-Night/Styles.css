@@ -24,7 +24,7 @@ body{
   margin: 0 auto;
   border-radius: 100%;
   border: 8px solid #FFB399;
-  background: #5ddfe8; 
+  background: #5ddfe8;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.25) inset;
   overflow: hidden;
 	transition: background 1s ease-in-out;
@@ -60,7 +60,7 @@ body{
   height: 140px;
   width: 135px;
   margin: 0 50px;
-  background: #777777;
+  background: #676767;
   transition: bottom .25s ease-in-out;
 }
 
@@ -69,7 +69,7 @@ body{
     height: 0;
     border-left: 0px solid transparent;
     border-right: 30px solid transparent;
-    border-bottom: 20px solid #777;
+    border-bottom: 20px solid #676767;
     top: -20px;
     left: 0;
     position: absolute;
@@ -80,7 +80,7 @@ body{
     height: 0;
     border-right: 0px solid transparent;
     border-left: 30px solid transparent;
-    border-bottom: 20px solid #777;
+    border-bottom: 20px solid #676767;
     top: -20px;
     right: 0;
     position: absolute;
@@ -97,7 +97,7 @@ body{
 .c-window .the-cat .eyes{
    display: block;
   position: absolute;
-  background: #FFEE94;
+  background: #CEC416;
   height: 40px; width: 40px;
   border-radius: 100%;
   bottom: 80px;
@@ -110,7 +110,6 @@ body{
   bottom: 100px;
 }
 
-
 .c-window .the-cat .eyes.left{
   left: 12px;
 }
@@ -122,7 +121,7 @@ body{
 .c-window .the-cat .eyes .pupil{
    display: block;
   position: relative;
-  background: #FFB399;
+  background: #111;
   height: 100%; width: 5px;
   border-radius: 100%;
   margin: 0 auto;
@@ -139,6 +138,24 @@ body{
   top: 45px;
 }
 
+ .cat-name{
+  display: block;
+  position: relative;
+  color: #131313;
+  background-color: #e7e5e4;
+  letter-spacing: .15em;
+  width: 100%;
+  border: 5px solid #FFB399;
+  border-radius: 10px;
+  text-align: center;;
+  padding: 10px 0px;
+  font-family: fantasy;
+  /*font-weight: bold;*/
+  font-size: 30px;
+  margin: 0 auto;
+  top: 45px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.25) inset;
+}
 
 input[type=checkbox] {
     position: absolute;
@@ -150,12 +167,11 @@ input[type=checkbox] {
      display:none;
  }
 
-
 label {
     position: absolute;
     height: 40px;
     width: 120px;
-    display: block; 
+    display: block;
     top: 0px; bottom: 0; right: 0; left:0;
     z-index: 9999;
     cursor: pointer;
@@ -163,7 +179,7 @@ label {
 }
 
 .switch {
-  display: block; 
+  display: block;
   position: relative;
   border-bottom: 1px solid #FFF;
   border-radius: 25px;
@@ -176,13 +192,13 @@ label {
 }
 
 .switch .button{
-  display: block; 
+  display: block;
   position: absolute;
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #AAA;
   border-radius: 100%;
   background: #FFCFBF;
-  height: 32px; 
+  height: 32px;
   width: 32px;
   top: 4px;
   left: 4px;
@@ -190,12 +206,12 @@ label {
 }
 
 .switch .button .b-inside{
-  display: block; 
+  display: block;
   position: absolute;
   border: 1px solid #888;
   border-radius: 100%;
   background: #FFEE94;
-  height: 15px; 
+  height: 15px;
   width: 15px;
   top: 7px;
   left: 7px;
@@ -264,16 +280,16 @@ input[type=checkbox]:checked ~ .c-window {
   background: #111;
 }
 
-input[type=checkbox]:checked ~ .c-window .the-sun{  
-	top: 200px; 
+input[type=checkbox]:checked ~ .c-window .the-sun{
+	top: 200px;
 }
 
-input[type=checkbox]:checked ~ .c-window .the-moon{ 
+input[type=checkbox]:checked ~ .c-window .the-moon{
   display: block;
   position: absolute;
   margin: 0 auto;
   top: 40px;
-  left: 60px;  
+  left: 60px;
 }
 
 input[type=checkbox]:checked ~ .c-window .the-cat{
@@ -291,6 +307,7 @@ input[type=checkbox]:checked ~ .c-window .the-cat:before{
     position: absolute;
     content: "";
 }
+
 input[type=checkbox]:checked ~ .c-window .the-cat:after{
    width: 0;
     height: 0;
@@ -303,14 +320,12 @@ input[type=checkbox]:checked ~ .c-window .the-cat:after{
     content: "";
 }
 
-
-
 input[type=checkbox]:checked ~ .c-window .the-cat .eyes .pupil{
   height: 90%; width: 34px;
   margin: 5% auto;
 }
 
 input[type=checkbox]:checked ~ .c-window .the-cat:hover .eyes{
-  height: 40px; 
+  height: 40px;
   bottom: 80px;
 }
