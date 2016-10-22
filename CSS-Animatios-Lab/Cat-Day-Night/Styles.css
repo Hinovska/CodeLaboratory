@@ -95,9 +95,13 @@ body{
 }
 
 .c-window .the-cat .eyes{
-   display: block;
+  display: block;
   position: absolute;
-  background: #CEC416;
+  background: #CEC416; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, #CEC416, #C9C11C, #B6D343); /* Safari */
+  background: -o-radial-gradient(circle, #CEC416, #C9C11C, #B6D343); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, #CEC416, #C9C11C, #B6D343); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, #CEC416, #C9C11C, #B6D343); /* Standard syntax */
   height: 40px; width: 40px;
   border-radius: 100%;
   bottom: 80px;
@@ -141,11 +145,11 @@ body{
  .cat-name{
   display: block;
   position: relative;
-  color: #131313;
+  color: #343434;
   background-color: #e7e5e4;
   letter-spacing: .15em;
   width: 100%;
-  border: 5px solid #FFB399;
+  border: 2px solid #797979;
   border-radius: 10px;
   text-align: center;;
   padding: 10px 0px;
@@ -154,7 +158,7 @@ body{
   font-size: 30px;
   margin: 0 auto;
   top: 45px;
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.25) inset;
+  box-shadow: 0px 0px 5px #9A9A9A inset;
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 }
 
@@ -249,7 +253,8 @@ label {
   height: 20px;
   width: 20px;
   border-radius: 100%;
-  background: #EEE;
+  background: #FFF;
+  border:1px solid #D5D5D5;
   box-shadow: 0px 0px 20px #EEE;
 }
 
@@ -259,6 +264,7 @@ label {
   left: 8px;
   height: 20px;
   width: 20px;
+  border-left: 1px solid #D5D5D5;
   border-radius: 100%;
   background: #FFCFBF;
 }
