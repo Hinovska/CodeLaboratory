@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<div id="RequestValues">
+			<input type="text" data-bind="textInput:ApiController"/>
+			<input type="text" data-bind="textInput:Identificator"/>
+		</div>
+		<div id="Content" data-bind="text:ResponseData">
+		</div>
+		<div id="Error" data-bind="text:ResponseError">
+		</div>
+		<a href="www.elespectador.com" data-prerender>Go to Hack Academy</a>
+		<script src="./Javascript/boostr.min.js"></script>
+		<script>
+			debugger;
+			var boostr = new boostr();
+			boostr.start();
+			boostr.preConnect('www.elespectador.com');
+			boostr.preFetch('www.elespectador.com');
+			boostr.preRender('www.elespectador.com');
+			boostr.preRender('www.elespectador.com');
+		</script>
+		<script src="./Javascript/jquery.min.js" type="text/javascript"></script>
+		<script src="./Javascript/knockout-3.4.0.js" type="text/javascript"></script>
+		<script src="./Javascript/Ajax.js" type="text/javascript"></script>
+		<script src="./Javascript/ApiRestConsumer.js" type="text/javascript"></script>
+	</body>
+
+</html>
