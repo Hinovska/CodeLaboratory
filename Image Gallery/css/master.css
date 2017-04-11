@@ -1,0 +1,116 @@
+/* Document style */
+		 		body * {
+		 			box-sizing : border-box;
+		 		}
+
+		 		header > * {
+		 			font-size:2em;
+		 			margin:0;
+		 		}
+		 		header {
+		 			margin-bottom: 2em;
+		 			text-align: center;
+		 		}
+		 		small {
+		 			font-size:0.9em;
+		 		}
+				body {
+					font-family: Lato, Calibri, Arial, sans-serif;
+					color:#ffffff;
+					background:#ffffff;
+					margin:0;
+					padding:0;
+				}
+
+				/* Links */
+				a {
+					color:#ffffff;
+					text-decoration: none;
+				}
+				a:hover {
+					color:#333333;
+				}
+
+				section {
+					overflow: auto;
+					padding:3em;
+					margin: 0 auto;
+				}
+
+				/* Simple slideshow (not resposive - yet) */
+				.slideshow-wrapper {
+					width:100%;
+					overflow:hidden;
+					margin: 0 auto;
+          min-width: 350px;
+          vertical-align: middle;
+          max-width: 720px;
+        }
+
+				.slideshow-wrapper ul {
+          background-color: red;
+					margin:0;
+					padding:0;
+					width: 2891px; /* 720 * 4 */
+					-webkit-transition: all 2.0s ease-in-out !important;
+-moz-transition: all 2.0s ease-in-out !important;
+-o-transition: all 2.0s ease-in-out !important;
+transition: all 2.0s ease-in-out !important;
+				}
+
+        .slideshow-wrapper li {
+            list-style-type: none;
+            text-align:center;
+
+        }
+
+				.slides .slide-image {
+          width: 100%;
+					max-width: 720px;
+					display:inline-block;
+					margin:0 ;
+					padding:0;
+				}
+				.slides .slide-image img {
+					width: 100%;
+					height: auto;
+				}
+
+				/* Helper classes */
+				.bg-blue {
+					background: #0E83CD;
+				}
+
+				.heart {
+					color:red;
+					font-size: 1.4em;
+				}
+				.text-center {
+					text-align: center;
+				}
+				.transition-all {
+					-webkit-transition: all 1s;
+					-moz-transition: all 1s;
+					-o-transition: all 1s;
+					transition: all 1s;
+				}
+
+				/* Animation */
+				@-webkit-keyframes slideshow {
+				  0%   	{ margin-left: 0.5%; 			}
+				  75% 	{ margin-left: -100%; 	}
+				}
+				@-moz-keyframes slideshow {
+					0%   	{ margin-left: 0.5%; 			}
+				  75% 	{ margin-left: -100%; 	}
+				}
+				@-o-keyframes slideshow {
+					0%   	{ margin-left: 0.5%; 			}
+				  75% 	{ margin-left: -100%; 	}
+				}
+				@keyframes slideshow {
+					0%   	{ margin-left: 0.5%; 			}
+				  75% 	{ margin-left: -100%; 	}
+				}
+
+				/* Media queries */

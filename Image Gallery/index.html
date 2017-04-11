@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Simple Slideshow with pure CSS3</title>
+    <link rel="stylesheet" href="./css/master.css">
+	</head>
+	<body>
+		<section class="bg-blue">
+			<article class="slideshow">
+				<header>
+					<h1>Simple slideshow with pure CSS3</h1>
+					<small>not responsive(yet)</small>
+				</header>
+				<div class="slideshow-wrapper">
+					<ul class="slides">
+						<li class="slide-image">
+							<img src="http://placehold.it/700x300/333/whitesmoke&text=Slide%20+%20n1" />
+						</li>
+						<li class="slide-image">
+							<img src="http://placehold.it/700x300/5954EB/333&text=Slide%20+%20n1&text=slide+n2" />
+						</li>
+						<li class="slide-image">
+							<img src="http://placehold.it/700x300/49B853/ffffff&text=Slide%20+%20n3" />
+						</li>
+						<li class="slide-image">
+							<img src="http://placehold.it/700x300/CF69CF/ffffff&text=Slide%20+%20n4" />
+						</li>
+					</ul>
+				</div>
+				<footer>
+					<p class='text-center'><br />
+						Made with love <span class='heart'>&hearts;</span> by
+						<a href="http://defidelis.herokuapp.com" title="Rafael Fidelis : Blog" class='transition-all' target="_blank">Rafael Fidelis</a>
+					</p>
+				</footer>
+		</article>
+		</section>
+    		<script src="./Javascript/jquery.js" type="text/javascript"></script>
+          		<script type="text/javascript">
+                  $(document).ready(function(){
+                    var direction = "rigth";
+                    $("div.slideshow-wrapper>ul>li").bind("click", function(){
+                      var move = $(this).width();
+                      var index = $(this).index();
+                      if  (direction == "rigth" && index == $("div.slideshow-wrapper>ul>li").length -1 ) {
+                        direction = "left";
+                      }
+                      else if (direction == "left" && index == 0 ) {
+                        direction = "rigth";
+                      }
+                      var Valuetomove = ( direction == "rigth" ) ?  (move * (index + 1)) * -1 :  (move * (index - 1)) * -1 ;
+                      $("div.slideshow-wrapper>ul").css({"-webkit-transform" : "translateX(" + Valuetomove +  "px)",
+                            "-moz-transform": "translateX(" + Valuetomove + "px)",
+                            "-o-transform": "translateX(" + Valuetomove + "px)",
+                            "-ms-transform": "translateX(" + Valuetomove + "px)",
+                            "transform": "translateX(" + Valuetomove + "px)"});
+                    });
+                  });
+              </script>
+      	</body>
+</html>
